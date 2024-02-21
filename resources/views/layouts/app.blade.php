@@ -27,16 +27,12 @@
 <body class="d-flex flex-column">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="{{ route('chollos.index') }}">
-            <img src="{{ asset('logo.png') }}" alt="Logo de Chollo Ofertas" height="50">
-            Chollo Ofertas
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="{{ route('chollos.index') }}">
+                <img src="{{ asset('logo.png') }}" alt="Logo de Chollo Ofertas" height="50">
+                Chollo Ofertas
+            </a>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('chollos.index') }}">Inicio</a>
                 </li>
@@ -48,6 +44,13 @@
                 </li>
             </ul>
         </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
     </nav>
 
     <div class="container mt-5">

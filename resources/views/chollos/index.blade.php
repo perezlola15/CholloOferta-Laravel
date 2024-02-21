@@ -9,10 +9,14 @@
             <li class="mb-4">
                 <div class="row">
                     <div class="col-md-2">
-                        <img src="{{ asset('img/' . $chollo->id . '-chollo-ofertas.jpg') }}" alt="Imagen del chollo" class="img-fluid">
+                        <img src="{{ asset('img/' . $chollo->id . '-chollo-ofertas.jpg') }}" alt="Imagen del chollo"
+                            class="img-fluid">
                     </div>
                     <div class="col-md-8">
-                        <h3>{{ $chollo->titulo }}</h3>
+                        <a href="{{ route('chollos.show', $chollo->id) }}" style="color: black"
+                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black'">
+                            <h3>{{ $chollo->titulo }}</h3>
+                        </a>
                         <p>{{ $chollo->descripcion }}</p>
                     </div>
                     <div class="col-md-2">
