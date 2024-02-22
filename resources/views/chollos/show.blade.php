@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
     <div class="row">
@@ -12,7 +12,6 @@
         </div>
         <div class="col-md-4">
             <img src="{{ asset('img/' . $chollo->id . '-chollo-ofertas.jpg') }}" alt="Imagen del Chollo" class="img-fluid">
-
         </div>
     </div>
     <div class="mt-4">

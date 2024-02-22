@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
     <h2>Listado de Chollos</h2>
@@ -14,17 +14,18 @@
                     </div>
                     <div class="col-md-8">
                         <a href="{{ route('chollos.show', $chollo->id) }}" style="color: black"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black'">
+                            onmouseover="this.style.color='#666666';" onmouseout="this.style.color='black'">
                             <h3>{{ $chollo->titulo }}</h3>
                         </a>
                         <p>{{ $chollo->descripcion }}</p>
+                        <p><b>{{ $chollo->precio }}€</b></p>
                     </div>
                     <div class="col-md-2">
                         <div class="btn-group" role="group">
-                            <a href="{{ route('chollos.show', $chollo->id) }}" class="btn btn-info">
-                                <i class="bi bi-eye"></i> Ver detalles
-                            </a>
-                            <a href="{{ route('chollos.edit', $chollo->id) }}" class="btn btn-warning">
+                            <a href="{{ route('chollos.show', $chollo->id) }}" class="btn btn-info mr-2">
+                                    <i class="bi bi-eye"></i> Ir al chollo
+                                </a>
+                            <a href="{{ route('chollos.edit', $chollo->id) }}" class="btn btn-warning mr-2">
                                 <i class="bi bi-pencil"></i> Editar
                             </a>
                             <form action="{{ route('chollos.destroy', $chollo->id) }}" method="POST">

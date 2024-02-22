@@ -50,17 +50,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            </div>
+        </div>
     </nav>
 
     <div class="container mt-5">
         @yield('content')
     </div>
 
-    <footer class="text-center">
-        <p>&copy;CholloOfertas Lola {{ date('Y') }}</p>
-    </footer>
-
+    <div style="background-color: #FDFBFB">
+        <footer class="text-center">
+            <p>Lola Pérez Ruiz &copy;CholloOfertas {{ date('Y') }}</p>
+        </footer>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
