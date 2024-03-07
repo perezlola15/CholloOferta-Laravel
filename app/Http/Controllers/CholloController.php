@@ -33,7 +33,7 @@ class CholloController extends Controller
             'descripcion' => 'La descripción es obligatoria',
             'url' => 'La URL es obligatoria',
             'categoria' => 'La categoria es obligatoria',
-            'puntuacion' => 'required|integer',
+            'puntuacion' => 'La puntuación es obligatoria',
             'precio' => 'El precio es obligatorio',
             'disponible' => 'La disponibilidad es obligatoria'
         ]);

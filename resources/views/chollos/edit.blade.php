@@ -21,37 +21,37 @@
 
                 <div class="form-group">
                     <label for="titulo">Título:</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" value="{{ $chollo->titulo }}" required>
+                    <input type="text" class="form-control" id="titulo" name="titulo" value="{{ $chollo->titulo }}">
                 </div>
 
                 <div class="form-group">
                     <label for="descripcion">Descripción:</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion" required>{{ $chollo->descripcion }}</textarea>
+                    <textarea class="form-control" id="descripcion" name="descripcion">{{ $chollo->descripcion }}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="descripcion">URL:</label>
-                    <textarea class="form-control" id="url" name="url" required>{{ $chollo->url }}</textarea>
+                    <input type="text" class="form-control" id="url" name="url" value="{{ $chollo->url }}">
                 </div>
 
                 <div class="form-group">
                     <label for="categoria">Categoría:</label>
-                    <textarea class="form-control" id="categoria" name="categoria" required>{{ $chollo->categoria }}</textarea>
+                    <input type="text" class="form-control" id="categoria" name="categoria" value="{{ $chollo->categoria }}">
                 </div>
 
                 <div class="form-group">
                     <label for="puntuacion">Puntuación:</label>
-                    <textarea class="form-control" id="puntuacion" name="puntuacion" required>{{ $chollo->puntuacion }}</textarea>
+                    <input type="number" class="form-control" id="puntuacion" name="puntuacion" value="{{ $chollo->puntuacion }}">
                 </div>
 
                 <div class="form-group">
                     <label for="precio">Precio:</label>
-                    <input type="number" class="form-control" id="precio" name="precio" required value="{{ $chollo->precio }}">
+                    <input type="number" class="form-control" id="precio" name="precio" value="{{ $chollo->precio }}">
                 </div>
 
                 <div class="form-group">
                     <label for="precio_descuento">Precio con descuento:</label>
-                    <input type="number" class="form-control" id="precio_descuento" name="precio_descuento" required value="{{ $chollo->precio_descuento }}">
+                    <input type="number" class="form-control" id="precio_descuento" name="precio_descuento" value="{{ $chollo->precio_descuento }}">
                 </div>
 
                 <div class="form-group">
