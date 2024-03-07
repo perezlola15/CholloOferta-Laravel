@@ -21,14 +21,21 @@ class CholloController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|max:255',
+            'titulo' => 'required|min:4',
             'descripcion' => 'required',
             'url' => 'required|url',
             'categoria' => 'required',
             'puntuacion' => 'required|integer',
             'precio' => 'required|numeric',
-            'precio_descuento' => 'required|numeric',
             'disponible' => 'required|boolean',
+        ], [
+            'titulo' => 'El título es obligatorio',
+            'descripcion' => 'La descripción es obligatoria',
+            'url' => 'La URL es obligatoria',
+            'categoria' => 'La categoria es obligatoria',
+            'puntuacion' => 'required|integer',
+            'precio' => 'El precio es obligatorio',
+            'disponible' => 'La disponibilidad es obligatoria'
         ]);
 
         // Convertir el valor del campo disponible a booleano

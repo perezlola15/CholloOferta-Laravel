@@ -3,7 +3,10 @@
 @section('content')
     <h2>Listado de Chollos</h2>
     </br>
-
+    <a href="{{ route('chollos.create') }}" class="btn btn-success">
+        <i class="bi bi-plus"></i> Añadir Chollo
+    </a>
+    </br></br></br>
     <ul class="list-unstyled">
         @foreach ($chollos as $chollo)
             <li class="mb-4">
@@ -18,13 +21,13 @@
                             <h3>{{ $chollo->titulo }}</h3>
                         </a>
                         <p>{{ $chollo->descripcion }}</p>
-                        <p><b>{{ $chollo->precio }}€</b></p>
+                        <p><b>{{ $chollo->precio_descuento }}€</b></p>
                     </div>
                     <div class="col-md-2">
                         <div class="btn-group" role="group">
                             <a href="{{ route('chollos.show', $chollo->id) }}" class="btn btn-info mr-2">
-                                    <i class="bi bi-eye"></i> Ir al chollo
-                                </a>
+                                <i class="bi bi-eye"></i> Ir al chollo
+                            </a>
                             <a href="{{ route('chollos.edit', $chollo->id) }}" class="btn btn-warning mr-2">
                                 <i class="bi bi-pencil"></i> Editar
                             </a>
@@ -42,7 +45,4 @@
         @endforeach
     </ul>
     </br>
-    <a href="{{ route('chollos.create') }}" class="btn btn-success">
-        <i class="bi bi-plus"></i> Añadir Chollo
-    </a>
 @endsection
