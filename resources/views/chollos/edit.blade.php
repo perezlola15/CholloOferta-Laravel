@@ -1,9 +1,10 @@
 @extends('layouts.master')
+@section('titulo', 'Editar un chollo')
 
 @section('content')
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Editar Chollo</h2>
+            <h2>Editar Chollo</h2><br />
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -62,7 +63,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Actualizar Chollo</button>
+                <button type="submit" class="btn btn-primary">Actualizar chollo</button>
             </form>
         </div>
     </div>

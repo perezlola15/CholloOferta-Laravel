@@ -1,9 +1,10 @@
 @extends('layouts.master')
+@section('titulo', 'Crear nuevo chollo')
 
 @section('content')
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Crear Nuevo Chollo</h2>
+            <h2>Crear nuevo chollo</h2><br />
 
             @if ($errors->any())
                 <div class="alert alert-danger">

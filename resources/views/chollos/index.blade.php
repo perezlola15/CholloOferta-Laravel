@@ -1,7 +1,7 @@
 @extends('layouts.master')
+@section('titulo', 'Listado de chollos')
 
 @section('content')
-    <h2>Listado de Chollos</h2>
     </br>
     <a href="{{ route('chollos.create') }}" class="btn btn-success">
         <i class="bi bi-plus"></i> Añadir Chollo

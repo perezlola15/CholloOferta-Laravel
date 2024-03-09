@@ -69,6 +69,14 @@ class CholloController extends Controller
             'precio' => 'required|numeric',
             'precio_descuento' => 'required|numeric',
             'disponible' => 'required|boolean',
+        ], [
+            'titulo' => 'El título es obligatorio',
+            'descripcion' => 'La descripción es obligatoria',
+            'url' => 'La URL es obligatoria',
+            'categoria' => 'La categoria es obligatoria',
+            'puntuacion' => 'La puntuación es obligatoria',
+            'precio' => 'El precio es obligatorio',
+            'disponible' => 'La disponibilidad es obligatoria'
         ]);
 
         $chollo = Chollo::find($id);
