@@ -21,6 +21,7 @@
                             <h3>{{ $chollo->titulo }}</h3>
                         </a>
                         <p>{{ $chollo->descripcion }}</p>
+                        <p><del>{{ $chollo->precio }}€</del></p>
                         <p><b>{{ $chollo->precio_descuento }}€</b></p>
                     </div>
                     <div class="col-md-2">
