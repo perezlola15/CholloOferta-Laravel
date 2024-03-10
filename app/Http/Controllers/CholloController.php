@@ -21,12 +21,13 @@ class CholloController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|min:4',
+            'titulo' => 'required',
             'descripcion' => 'required',
             'url' => 'required|url',
             'categoria' => 'required',
             'puntuacion' => 'required|integer',
             'precio' => 'required|numeric',
+            'precio_descuento' => 'required|numeric',
             'disponible' => 'required|boolean',
         ], [
             'titulo' => 'El título es obligatorio',
@@ -35,6 +36,7 @@ class CholloController extends Controller
             'categoria' => 'La categoria es obligatoria',
             'puntuacion' => 'La puntuación es obligatoria',
             'precio' => 'El precio es obligatorio',
+            'precio_descuento' => 'El precio con descuento es obligatorio',
             'disponible' => 'La disponibilidad es obligatoria'
         ]);
 
@@ -61,7 +63,7 @@ class CholloController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'titulo' => 'required|max:255',
+            'titulo' => 'required',
             'descripcion' => 'required',
             'url' => 'required|url',
             'categoria' => 'required',
@@ -76,7 +78,8 @@ class CholloController extends Controller
             'categoria' => 'La categoria es obligatoria',
             'puntuacion' => 'La puntuación es obligatoria',
             'precio' => 'El precio es obligatorio',
-            'disponible' => 'La disponibilidad es obligatoria'
+            'precio_descuento' => 'El precio con descuento es obligatorio',
+            'disponible' => 'La disponibilidad es obligatoria',
         ]);
 
         $chollo = Chollo::find($id);
